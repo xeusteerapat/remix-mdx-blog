@@ -10,6 +10,7 @@ import {
 } from '@remix-run/react';
 import { MantineProvider, createEmotionCache } from '@mantine/core';
 import { StylesPlaceholder } from '@mantine/remix';
+import Layout from './components/Layout';
 
 createEmotionCache({ key: 'mantine' });
 
@@ -29,10 +30,12 @@ export default function App() {
           <Links />
         </head>
         <body>
-          <Outlet />
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
+          <Layout>
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+          </Layout>
         </body>
       </html>
     </MantineProvider>
