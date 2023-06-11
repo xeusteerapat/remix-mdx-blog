@@ -8,11 +8,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
-import { MantineProvider, createEmotionCache } from '@mantine/core';
-import { StylesPlaceholder } from '@mantine/remix';
-import Layout from './components/Layout';
-
-createEmotionCache({ key: 'mantine' });
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
@@ -20,24 +15,19 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <html lang='en'>
-        <head>
-          <meta charSet='utf-8' />
-          <meta name='viewport' content='width=device-width,initial-scale=1' />
-          <StylesPlaceholder />
-          <Meta />
-          <Links />
-        </head>
-        <body>
-          <Layout>
-            <Outlet />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload />
-          </Layout>
-        </body>
-      </html>
-    </MantineProvider>
+    <html lang='en'>
+      <head>
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        <LiveReload />
+      </body>
+    </html>
   );
 }
