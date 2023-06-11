@@ -13,6 +13,7 @@
     "@mantine/core": "^6.0.13",
     "@mantine/ds": "^6.0.13",
     "@mantine/hooks": "^6.0.13",
+    "@mantine/prism": "^6.0.13",
     "@mantine/remix": "^6.0.13",
     "@netlify/functions": "^1.4.0",
     "@remix-run/css-bundle": "^1.17.0",

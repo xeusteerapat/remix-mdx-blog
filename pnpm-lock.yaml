@@ -20,6 +20,9 @@ dependencies:
   '@mantine/hooks':
     specifier: ^6.0.13
     version: 6.0.13(react@18.2.0)
+  '@mantine/prism':
+    specifier: ^6.0.13
+    version: 6.0.13(@mantine/core@6.0.13)(@mantine/hooks@6.0.13)(react-dom@18.2.0)(react@18.2.0)
   '@mantine/remix':
     specifier: ^6.0.13
     version: 6.0.13(@emotion/react@11.11.1)(@emotion/server@11.11.0)(@mantine/core@6.0.13)(@mantine/hooks@6.0.13)(react-dom@18.2.0)(react@18.2.0)
